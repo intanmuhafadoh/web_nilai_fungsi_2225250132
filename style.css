@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+    color: #26334a;
+    line-height: 1.7;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: white;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #284b91;
+}
+
+.logo span {
+    color: #f2a541;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #35445e;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #e99b32;
+}
+
+.hero {
+    min-height: 480px;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: linear-gradient(120deg, #eaf1ff, #fff5e7);
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.tagline {
+    color: #e79a35;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 43px;
+    line-height: 1.2;
+    color: #24447e;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.tagline) {
+    color: #65718a;
+    margin-bottom: 28px;
+}
+
+.btn {
+    display: inline-block;
+    background: #31569b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #203e78;
+}
+
+.hero-card {
+    background: white;
+    width: 290px;
+    padding: 35px 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(40,70,120,0.12);
+}
+
+.math-symbol {
+    font-size: 55px;
+    font-weight: bold;
+    color: #31569b;
+    margin-bottom: 15px;
+}
+
+.hero-card h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.hero-card p {
+    color: #778198;
+    font-size: 14px;
+}
+
+.section {
+    padding: 75px 10%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.section h2 {
+    font-size: 30px;
+    color: #24447e;
+    margin-bottom: 15px;
+}
+
+.section > p:not(.tagline) {
+    color: #68748a;
+    margin-bottom: 25px;
+}
+
+.formula-box,
+.example-box,
+.quiz-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-top: 25px;
+}
+
+.formula {
+    font-size: 34px;
+    font-weight: bold;
+    color: #31569b;
+    text-align: center;
+    padding: 20px;
+}
+
+.example-box h3 {
+    color: #31569b;
+    margin-bottom: 10px;
+}
+
+.steps {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f0f5ff;
+    border-radius: 10px;
+}
+
+.steps p {
+    margin: 8px 0;
+}
+
+.answer {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e8f7ee;
+    color: #247346;
+    border-radius: 9px;
+    font-weight: bold;
+}
+
+.quiz-box h3 {
+    margin-bottom: 20px;
+    color: #31569b;
+}
+
+.options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.options button {
+    padding: 14px;
+    border: 2px solid #dce5f5;
+    background: #f8faff;
+    border-radius: 9px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.options button:hover {
+    background: #eaf1ff;
+    border-color: #31569b;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#score {
+    margin-top: 10px;
+    color: #31569b;
+    font-weight: bold;
+}
+
+footer {
+    background: #24447e;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .section {
+        padding: 50px 7%;
+    }
+
+    .options {
+        grid-template-columns: 1fr;
+    }
+}
+#question-number {
+    color: #31569b;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 10px;
+    background: #e5eaf3;
+    border-radius: 20px;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+#progress-bar {
+    width: 20%;
+    height: 100%;
+    background: #f2a541;
+    border-radius: 20px;
+    transition: width 0.3s ease;
+}
+
+#feedback,
+#explanation {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#explanation {
+    color: #52627a;
+    font-weight: normal;
+    line-height: 1.7;
+}
+
+#next-button,
+#result button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #31569b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#next-button:disabled {
+    background: #aab5c7;
+    cursor: not-allowed;
+}
+
+#options button:disabled {
+    cursor: not-allowed;
+    opacity: 0.75;
+}
+
+#result {
+    margin-top: 25px;
+    padding: 20px;
+    background: #f0f5ff;
+    border-radius: 12px;
+}
+
+#result h3 {
+    color: #31569b;
+}
+
+/* =========================
+   PENYEMPURNAAN TAMPILAN
+========================= */
+
+/* Transisi agar elemen terasa lebih halus */
+a, button, .formula-box, .example-box, .quiz-box {
+    transition: all 0.25s ease;
+}
+
+/* Navbar */
+.navbar {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+nav a {
+    font-size: 14px;
+}
+
+/* Judul bagian */
+.section h2 {
+    letter-spacing: -0.5px;
+}
+
+/* Kartu materi dan latihan */
+.formula-box,
+.example-box,
+.quiz-box {
+    border: 1px solid #edf0f6;
+    box-shadow: 0 8px 25px rgba(36, 68, 126, 0.07);
+}
+
+.formula-box:hover,
+.example-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(36, 68, 126, 0.11);
+}
+
+/* Tombol utama */
+.btn,
+#next-button,
+#result button {
+    transition: all 0.25s ease;
+}
+
+.btn:hover,
+#next-button:not(:disabled):hover,
+#result button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(49, 86, 155, 0.2);
+}
+
+/* Pilihan jawaban */
+.options button {
+    text-align: left;
+    color: #35445e;
+    transition: all 0.2s ease;
+}
+
+.options button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    background: #edf3ff;
+}
+
+/* Tombol petunjuk */
+#hint-button {
+    margin-top: 18px;
+    padding: 10px 18px;
+    border: 1px solid #31569b;
+    border-radius: 8px;
+    background: white;
+    color: #31569b;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#hint-button:hover:not(:disabled) {
+    background: #edf3ff;
+}
+
+#hint-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Petunjuk dan pembahasan */
+#hint-text {
+    margin-top: 12px;
+    padding: 12px 15px;
+    background: #fff7e9;
+    border-radius: 8px;
+    color: #8a642b;
+}
+
+/* Tabel materi */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 13px;
+    border: 1px solid #e5eaf3;
+    text-align: center;
+}
+
+th {
+    background: #31569b;
+    color: white;
+}
+
+/* Tampilan layar kecil */
+@media (max-width: 700px) {
+    .formula-box,
+    .example-box,
+    .quiz-box {
+        padding: 22px 18px;
+    }
+
+    .formula {
+        font-size: 27px;
+    }
+
+    .section h2 {
+        font-size: 26px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 9px 6px;
+    }
+}
